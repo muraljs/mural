@@ -1,6 +1,6 @@
 {
   "name": "bur",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A full stack framework to seed your React and GrahphQL projects.",
   "main": "index.js",
   "scripts": {
