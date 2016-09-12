@@ -1,14 +1,13 @@
 {
   "name": "bur",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A full stack framework to seed your React and GrahphQL projects.",
   "main": "index.js",
   "scripts": {
     "test": "mocha -r should ."
   },
   "bin": {
-    "bur-new": "./bin/new.js",
-    "bur-app": "./bin/app.js"
+    "bur": "./bin/bur.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +28,7 @@
   "homepage": "https://github.com/craigspaeth/bur#readme",
   "dependencies": {
     "commander": "^2.9.0",
+    "dedent": "^0.6.0",
     "lodash": "^4.15.0"
   }
 }
