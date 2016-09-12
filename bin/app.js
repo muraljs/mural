@@ -2,7 +2,7 @@
 //
 // Given an app name and attributes, this will scaffold a bare MVC sup app
 //
-// $ gluu app article title:string body:string
+// $ bur app article title:string body:string
 //
 const { values, map, fromPairs, keys, uniq } = require('lodash')
 const program = require('commander')

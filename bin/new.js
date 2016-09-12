@@ -6,7 +6,7 @@
 // $ cd myapp
 // $ npm install
 //
-// $ gluu app article title:string body:string
+// $ bur app article title:string body:string
 //
 // Project structure looks like
 // /apps
@@ -55,14 +55,11 @@ MONGO_URL=mongodb://localhost:27017/${projectName}
 const pkgjson = `
 {
   "name": "${projectName}",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "node": "NODE_PATH=$NODE_PATH:./lib node ${globalRequires}",
+    "node": "NODE_PATH=$NODE_PATH:./lib ${globalRequires}",
     "start": "concurrently 'npm run node .' 'mongod'"
-  },
-  "standard": {
-    "parser": "babel-eslint"
   },
   "babel": {
     "presets": [
@@ -80,21 +77,22 @@ const pkgjson = `
     "babel-preset-es2015": "^6.13.0",
     "babel-preset-stage-3": "^6.11.0",
     "babelify": "^7.3.0",
+    "concurrently": "^2.1.0",
+    "dotenv": "^2.0.0",
+    "envify": "^3.4.0",
     "graphql": "^0.7.0",
+    "hotglue": "0.0.2",
+    "joiql-mongo": "^1.0.7",
     "koa": "^2.0.0-alpha.4",
     "lokka": "^1.7.0",
     "lokka-transport-http": "^1.4.0",
-    "promised-mongo": "^1.2.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
     "unikoa": "0.0.1",
     "unikoa-bootstrap": "0.0.2",
     "unikoa-react-render": "0.0.3",
-    "universal-tree": "0.0.1",
-    "veact": "0.0.5",
-    "hotglue": "0.0.2",
-    "dotenv": "^2.0.0",
-    "concurrently": "^2.1.0",
-    "envify": "^3.4.0",
-    "joiql-mongo": "^1.0.7"
+    "universal-tree": "0.0.2",
+    "veact": "0.0.5"
   }
 }
 `.trim() + '\n'
@@ -111,5 +109,5 @@ console.log(`
    $ cd ${dir} && npm install
 
  generate a sub app:
-   $ gluu app article title:string body:string
+   $ bur app article title:string body:string
 `)
