@@ -1,6 +1,6 @@
 {
   "name": "bur",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A full stack framework to seed your React and GrahphQL projects.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "bin": {
     "bur new": "./bin/new.js",
-    "bur app": "./bin/app.js",
+    "bur app": "./bin/app.js"
   },
   "repository": {
     "type": "git",
