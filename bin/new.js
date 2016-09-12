@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 //
 // Given a name for a project, this scaffolds the initial directory with
 // and empty /apps folder. After using it'll prompt to...

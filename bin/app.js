@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 //
 // Given an app name and attributes, this will scaffold a bare MVC sup app
 //
