@@ -1,5 +1,5 @@
 {
-  "name": "bur",
+  "name": "mural",
   "version": "0.0.5",
   "description": "A full stack framework to seed your React and GrahphQL projects.",
   "main": "index.js",
@@ -7,11 +7,11 @@
     "test": "mocha -r should ."
   },
   "bin": {
-    "bur": "./bin/bur.js"
+    "mural": "./bin/mural.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/craigspaeth/bur.git"
+    "url": "git+https://github.com/craigspaeth/mural.git"
   },
   "keywords": [
     "react",
@@ -23,9 +23,9 @@
   "author": "Craig Spaeth",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/craigspaeth/bur/issues"
+    "url": "https://github.com/craigspaeth/mural/issues"
   },
-  "homepage": "https://github.com/craigspaeth/bur#readme",
+  "homepage": "https://github.com/craigspaeth/mural#readme",
   "dependencies": {
     "commander": "^2.9.0",
     "dedent": "^0.6.0",

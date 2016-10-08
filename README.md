@@ -1,32 +1,32 @@
-# bur
+# mural
 
 A full stack framework to seed your React and GrahphQL projects.
 
 ### Intro
 
-Bur combines next generation tools like React, GraphQL and Koa with an opinionated minimalist architecture. Bur tries to simplify building modern web apps in a couple ways...
+Mural combines next generation tools like React, GraphQL and Koa with an opinionated minimalist architecture. Mural tries to simplify building modern web apps in a couple ways...
 
 1. One language to rule them all
 
 [JS Logo]
 
-It's ES2017 all the way down from view styling to database queries. Bur also encourages working with a minimal, pragmatically functional, feature set of Javascript to avoid common Javascript pitfalls like managing scope and inheritence.
+It's ES2017 all the way down from view styling to database queries. Mural also encourages working with a minimal, pragmatically functional, feature set of Javascript to avoid common Javascript pitfalls like managing scope and inheritence.
 
 2. Minimalistic architecture
 
 [MVC picture]
 
-Bur provides a base "MVC" architecture that scales complexity through modularity and flexiblity. Architectures using React and GraphQL these days can involve many layers and concepts such as "Resolvers", "Connectors", and "Schemas" on the GraphQL-side and "Actions", "Action Creators", "Reducers", "Stores", "React Routers", "React Views", on the React side. Bur tries to boil these layers down into a simpler separation of Model, View and Controller. That is not to say Bur is going backwards by eschewing newer ideas like unidirectional data flow for object-oriented data binding—instead Bur is taking liberty with the MVC definition to draw broader archictural lines around layers. Read more.
+Mural provides a base "MVC" architecture that scales complexity through modularity and flexiblity. Architectures using React and GraphQL these days can involve many layers and concepts such as "Resolvers", "Connectors", and "Schemas" on the GraphQL-side and "Actions", "Action Creators", "Reducers", "Stores", "React Routers", "React Views", on the React side. Mural tries to boil these layers down into a simpler separation of Model, View and Controller. That is not to say Mural is going backwards by eschewing newer ideas like unidirectional data flow for object-oriented data binding—instead Mural is taking liberty with the MVC definition to draw broader archictural lines around layers. Read more.
 
 3. Eliminating boilerplate
 
 [code showing generator commands]
 
-Plugging together the many modules needed to get started with a basic app architecture using modern Javascript can be tiresome. Javascript fatigue is real, and Bur is here to help. Bur combines an opinionated set of tools using wrapper libraries like unikoa, joiql, and veact with a project generator command line tool to make it quick and easy to get set up.
+Plugging together the many modules needed to get started with a basic app architecture using modern Javascript can be tiresome. Javascript fatigue is real, and Mural is here to help. Mural combines an opinionated set of tools using wrapper libraries like unikoa, joiql, and veact with a project generator command line tool to make it quick and easy to get set up.
 
 ### Getting Started
 
-Bur stands on the shoulder's of giants. It would first be good to familiarize yourself with these tools.
+Mural stands on the shoulder's of giants. It would first be good to familiarize yourself with these tools.
 
 * GraphQL
 * React
@@ -34,7 +34,7 @@ Bur stands on the shoulder's of giants. It would first be good to familiarize yo
 * Koa
 * Joi
 
-Then you might want to understand some of the wrapper libraries that combine these into the Bur stack.
+Then you might want to understand some of the wrapper libraries that combine these into the Mural stack.
 
 * Unikoa
 * Universal Tree
@@ -45,8 +45,8 @@ Then you might want to understand some of the wrapper libraries that combine the
 Gett started using the CLI
 
 ```
-$ npm i -g bur
-$ bur new myapp
+$ npm i -g mural
+$ mural new myapp
 $ cd myapp
 $ npm install
 ```
@@ -54,7 +54,7 @@ $ npm install
 Then create your first sub app, specifying model attributes.
 
 ```
-$ bur app article title:string body:string
+$ mural app article title:string body:string
 ```
 
 And start the application
@@ -65,7 +65,7 @@ $ npm start
 
 ### Architecture
 
-Bur largely separates code into model, view and controller layers with supplementary concepts of routers, apps, and libraries. As your project grows it is encouraged to expand on this architecture by adding new layers or breaking out more apps (more on this below).
+Mural largely separates code into model, view and controller layers with supplementary concepts of routers, apps, and libraries. As your project grows it is encouraged to expand on this architecture by adding new layers or breaking out more apps (more on this below).
 
 #### How it works
 
@@ -91,7 +91,7 @@ Client-side modal opening
 
 #### Models
 
-Models represent the data layer from GraphQL to the database. Bur combine's Joi, GraphQL, and MongoDB into a full data modeling solution called JoiQL Mongo. The basic idea is that you define your schema using Joi's API and hook into Koa-like middleware that persists at the bottom of the middleware stack.
+Models represent the data layer from GraphQL to the database. Mural combine's Joi, GraphQL, and MongoDB into a full data modeling solution called JoiQL Mongo. The basic idea is that you define your schema using Joi's API and hook into Koa-like middleware that persists at the bottom of the middleware stack.
 
 ```javascript
 import { model, string } from 'joiql-mongo'
@@ -234,18 +234,18 @@ That said, a sort of "twelve factor" manifesto for writings apps/libs...
 
 #### Blossoming Complexity
 
-There are a number of strategies for dealing with complexity growing beyond the base MVC architecture Bur encourages. First of all a couple high-level philosophies we can suggest:
+There are a number of strategies for dealing with complexity growing beyond the base MVC architecture Mural encourages. First of all a couple high-level philosophies we can suggest:
 
 1. Solve big problems by breaking them down into smaller problems
 2. There is no single tool for _every_ job—be quick to abbandon, or expand upon, patterns or libraries that aren't cutting it
 
 With that said, ways to put this in practice can take numerous shapes...
 
-Firstly if you find an app growing large in size and complexity, try splitting the app apart into smaller apps. For instance a single page for a user's profile could end up evolving into a full blown microsite with settings, photos, and blog pages. In this case it might make sense to separate that single user app into user-settings, user-photos, user-blog apps. A quick page refresh between app boundaries can do wonders for managing complexity and with Bur's universal appraoch to UI it could likely have little effect on the end user experience. Similarly it might make sense to refactor apps in a way that combines models into an API app and separates the views and controllers in to UI apps. Eventually you may even want to move some apps out into their own separarely deployed codebases.
+Firstly if you find an app growing large in size and complexity, try splitting the app apart into smaller apps. For instance a single page for a user's profile could end up evolving into a full blown microsite with settings, photos, and blog pages. In this case it might make sense to separate that single user app into user-settings, user-photos, user-blog apps. A quick page refresh between app boundaries can do wonders for managing complexity and with Mural's universal appraoch to UI it could likely have little effect on the end user experience. Similarly it might make sense to refactor apps in a way that combines models into an API app and separates the views and controllers in to UI apps. Eventually you may even want to move some apps out into their own separarely deployed codebases.
 
 If spliting an app with page refreshes is unacceptable, then it might make sense to introduce more layers beyond the base MVC. For instance if controller logic is getting to bloated you can introduce a UI model that extracts the state tree and the meat of controller functions into a UI model library. If the JoiQL Mongo model logic is getting too heavy it might make sense to break the functionality out into more single purpose libraries such as a "mailers" or "util".
 
-Finally, the tools that Bur provides you are an attempt at something that is useful most of the time. If a particular UI or backend need is not a good fit for React, Mongo, GraphQL or any of the other tools provided—don't be shy about abandoning it all together. Bur's modular architecture should make it amiable to mount a new Koa app from scratch for a blank slate, or spin up an entirely different frontend or backend codebase that talks to the original Bur app.
+Finally, the tools that Mural provides you are an attempt at something that is useful most of the time. If a particular UI or backend need is not a good fit for React, Mongo, GraphQL or any of the other tools provided—don't be shy about abandoning it all together. Mural's modular architecture should make it amiable to mount a new Koa app from scratch for a blank slate, or spin up an entirely different frontend or backend codebase that talks to the original Mural app.
 
 ### Why Yet Another Javscript Framework
 
@@ -253,11 +253,11 @@ GraphQL and React are revolutionary to how we build web apps. React has made bui
 
 These technologies have caused a wonderful explosion of ideas, patterns, and ecosystem. So much so that it can be overwhelming to wrap one's head around it all—especially if you're building on top of a batteries included framework like Rails with it's own robust architecture. There are already various boilerplates and frameworks for getting started with React, and React-like, projects but they often leave out GraphQL or the backend story all-together.
 
-Bur provides an end-to-end solution for building React + GraphQL apps with minimal layers, languages, and boilerplate involved.
+Mural provides an end-to-end solution for building React + GraphQL apps with minimal layers, languages, and boilerplate involved.
 
-### Bur?
+### Mural?
 
-A bur is a prickly seed case common in carrying the seeds of a tree. Turns out Bur projects are full of trees! You have your React component tree, your Baobab state tree, even GraphQL schemas are tree-like. So it felt appropriate that we name this framework after something that can begin your beautiful forest of apps. Also it's three letters, there's only two hard things in computer science, and npm is pretty booked these days.
+A mural is a prickly seed case common in carrying the seeds of a tree. Turns out Mural projects are full of trees! You have your React component tree, your Baobab state tree, even GraphQL schemas are tree-like. So it felt appropriate that we name this framework after something that can begin your beautiful forest of apps. Also it's three letters, there's only two hard things in computer science, and npm is pretty booked these days.
 
 ## Contributing
 
