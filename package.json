@@ -1,6 +1,6 @@
 {
   "name": "mural",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A full stack framework to seed your React and GrahphQL projects.",
   "main": "index.js",
   "scripts": {
