@@ -1,4 +1,4 @@
-![Mural.js](https://raw.githubusercontent.com/muraljs/mural/master/logo.svg)
+![Mural.js](https://raw.githubusercontent.com/muraljs/mural/master/logo.png)
 
 A full stack framework to seed your React and GrahphQL projects.
 
