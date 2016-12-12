@@ -1,6 +1,6 @@
 ![Mural.js](https://raw.githubusercontent.com/muraljs/mural/master/logo.png)
 
-A full stack framework to seed your React and GraphQL projects.
+A WIP framework for React and GraphQL. Check out an example of it being used in rebuilding Artsy's internal HR product [Team Navigator](https://github.com/artsy/team-navigator/tree/v2).
 
 ### Intro
 
