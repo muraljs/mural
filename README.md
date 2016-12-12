@@ -1,48 +1,48 @@
 ![Mural.js](https://raw.githubusercontent.com/muraljs/mural/master/logo.png)
 
-A WIP framework for React and GraphQL. Check out an example of it being used in rebuilding Artsy's internal HR product [Team Navigator](https://github.com/artsy/team-navigator/tree/v2).
+A WIP framework for React and GraphQL. Check out an example of it being used to rebuild Artsy's internal HR product [Team Navigator](https://github.com/artsy/team-navigator/tree/v2), watch a [Lunch & Learn talk recording](https://www.dropbox.com/s/f8q5hbzwy76h3nt/contemplating-a-new-web-stack.mov?dl=0) from Artsy exploring the idea, or skip to [The Why](https://github.com/muraljs/mural#why-yet-another-javscript-framework) for a better introduction.
 
 ### Intro
 
 Mural combines next generation tools like React, GraphQL and Koa with an opinionated minimalist architecture. Mural tries to simplify building modern web apps in a couple ways...
 
-1. One language to rule them all
+#### One language to rule them all
 
 [JS Logo]
 
 It's ES2017 all the way down from view styling to database queries. Mural also encourages working with a minimal, pragmatically functional, feature set of Javascript to avoid common Javascript pitfalls like managing scope and inheritence.
 
-2. Minimalistic architecture
+#### Minimalistic architecture
 
 [MVC picture]
 
-Mural provides a base "MVC" architecture that scales complexity through modularity and flexiblity. Architectures using React and GraphQL these days can involve many layers and concepts such as "Resolvers", "Connectors", and "Schemas" on the GraphQL-side and "Actions", "Action Creators", "Reducers", "Stores", "React Routers", "React Views", on the React side. Mural tries to boil these layers down into a simpler separation of Model, View and Controller. That is not to say Mural is going backwards by eschewing newer ideas like unidirectional data flow for object-oriented data binding—instead Mural is taking liberty with the MVC definition to draw broader archictural lines around layers. Read more.
+Mural provides a base "MVC" architecture that scales complexity through modularity and flexiblity. Architectures using React and GraphQL these days can involve many layers and concepts such as "Resolvers", "Connectors", and "Schemas" on the GraphQL-side and "Actions", "Action Creators", "Reducers", "Stores", "React Routers", "React Views", on the React side. Mural tries to boil these layers down into a simpler separation of Model, View and Controller. That is not to say Mural is going backwards by eschewing newer ideas like unidirectional data flow for object-oriented data binding—instead Mural is taking liberty with the MVC definition to draw broader archictural lines around layers. [Read more](#architecture).
 
-3. Eliminating boilerplate
+#### Eliminating boilerplate
 
-[code showing generator commands]
+[GIF of terminal starting a Mural project]
 
-Plugging together the many modules needed to get started with a basic app architecture using modern Javascript can be tiresome. Javascript fatigue is real, and Mural is here to help. Mural combines an opinionated set of tools using wrapper libraries like unikoa, joiql, and veact with a project generator command line tool to make it quick and easy to get set up.
+Plugging together the many modules needed to get started with a basic app architecture using modern Javascript can be tiresome. Javascript fatigue is real, and Mural is here to help. Mural combines an opinionated set of tools using wrapper libraries like Unikoa, JoiQL, and Veact with a project generator command line tool to make it quick and easy to get set up.
 
 ### Getting Started
 
 Mural stands on the shoulder's of giants. It would first be good to familiarize yourself with these tools.
 
-* GraphQL
-* React
-* Baobab
-* Koa
-* Joi
+* [GraphQL](http://graphql.org/)
+* [React](https://facebook.github.io/react/)
+* [Baobab](https://github.com/Yomguithereal/baobab)
+* [Koa](http://koajs.com/)
+* [Joi](https://github.com/hapijs/joi)
 
 Then you might want to understand some of the wrapper libraries that combine these into the Mural stack.
 
-* Unikoa
-* Universal Tree
-* JoiQL
-* JoiQL Mongo
-* Veact
+* [Unikoa](https://github.com/muraljs/unikoa)
+* [Universal Tree](https://github.com/muraljs/universal-tree)
+* [JoiQL](https://github.com/muraljs/joiql)
+* [JoiQL Mongo](https://github.com/muraljs/joiql-mongo)
+* [Veact](https://github.com/muraljs/veact)
 
-Gett started using the CLI
+Get started using the CLI
 
 ```
 $ npm i -g mural
@@ -69,7 +69,7 @@ Mural largely separates code into model, view and controller layers with supplem
 
 #### How it works
 
-[UML diagram image]
+![](https://d17oy1vhnax1f7.cloudfront.net/items/1y0X0t2t3u3C0O1j3c3I/Screen%20Shot%202016-12-12%20at%202.36.38%20PM.png?v=53f7cc61)
 
 Let's explain with two examples.
 
@@ -91,7 +91,7 @@ Client-side modal opening
 
 #### Models
 
-Models represent the data layer from GraphQL to the database. Mural combine's Joi, GraphQL, and MongoDB into a full data modeling solution called JoiQL Mongo. The basic idea is that you define your schema using Joi's API and hook into Koa-like middleware that persists at the bottom of the middleware stack.
+Models represent the data layer from GraphQL to the database. Mural combines Joi, GraphQL, and MongoDB into a full data modeling solution called JoiQL Mongo. The basic idea is that you define your schema using Joi's API and hook into Koa-like middleware that persists to the database at the bottom of the middleware stack.
 
 ```javascript
 import { model, string } from 'joiql-mongo'
@@ -121,15 +121,15 @@ app.use(graphqlize(models))
 
 Better understand models by reading about the tools they're made of...
 
-* MongoDB
-* Joi
-* GraphQL
-* JoiQL
-* JoiQL Mongo
+* [MongoDB](https://www.mongodb.com/)
+* [Joi](https://github.com/hapijs/joi)
+* [GraphQL](http://graphql.org/)
+* [JoiQL](https://github.com/muraljs/joiql)
+* [JoiQL Mongo](https://github.com/muraljs/joiql-mongo)
 
 #### Views
 
-Views are React components written in a more functional, vanilla Javascript, manner. Methods or event handlers you might typically add to a React component's class are extracted into controller functions—leaving the views to styling and rendering. This functional, vanilla JS, style of writing React components is wrapped up in a little library called Veact.
+Views are React components written in a more functional, vanilla Javascript, manner. Methods or event handlers you might typically add to a React component's class are extracted into controller functions—leaving the views to styling and rendering. This style of writing React components is wrapped up in a little library called [Veact](https://github.com/muraljs/veact).
 
 ```javascript
 import veact from 'veact'
@@ -160,12 +160,12 @@ Using all Javascript has some advantages over other approaches such as combining
 
 Better understand views by reading about the tools they're made of...
 
-* React
-* Veact
+* [React](https://github.com/facebook/react)
+* [Veact](https://github.com/muraljs/veact)
 
 #### Controllers
 
-Controllers capture all the input handling logic and are simply a library of functions that operate on a state tree and are delegated to by views and routers. You can think of the controller state tree as one giant object that holds any data that could change over time. Everything from a boolean determining if a modal window is open or closed to the rich domain data of a model like fetched user data is fair game for the state tree. You may be thinking "Woh, one giant object holding all of your app's stateful data. That sounds insane an unmanageable". Well it turns out it's very reasonable and there's a lot of advantages to doing it this way. Thanks to Baobab you can also use [cursors], [monkies], and other architectural techniques [explained more below] to help manage a large state tree.
+Controllers capture all the input handling logic and are simply a library of functions that operate on a state tree which are delegated to by views and routers. You can think of the controller state tree as one giant object that holds any data that could change over time. Everything from a boolean determining if a modal window is open or closed to the rich domain data of a model like fetched user data is fair game for the state tree. You may be thinking "Woh, one giant object holding all of your app's stateful data. That sounds insane an unmanageable". Well it turns out [it's very reasonable](http://merrickchristensen.com/articles/single-state-tree.html) and there's a lot of advantages to doing it this way. Thanks to Baobab you can also use [cursors](https://github.com/Yomguithereal/baobab#cursors), [monkeys](https://github.com/Yomguithereal/baobab#computed-data-or-monkey-business), and other architectural techniques [explained more below](https://github.com/muraljs/mural#blossoming-complexity) to help manage a large state tree.
 
 ```javascript
 import tree from 'universal-tree'
@@ -188,9 +188,9 @@ export const articlePage = async (ctx) => {
 
 Better understand controllers by reading about the tools they're made of...
 
-* Baobab
-* Universal Tree
-* Lokka
+* [Baobab](https://github.com/Yomguithereal/baobab)
+* [Universal Tree](https://github.com/muraljs/universal-tree)
+* [Lokka](https://github.com/kadirahq/lokka)
 
 #### Routers
 
@@ -207,11 +207,11 @@ router.get('/article/:id', show)
 
 Better understand routers by reading about the tools they're made of...
 
-* Koa
-* Unikoa
-* Unikoa React Render
-* Unikoa Bootstrap
-* Page.js
+* [Koa](http://koajs.com/)
+* [Unikoa](https://github.com/muraljs/unikoa)
+* [Unikoa React Render](https://github.com/muraljs/unikoa-react-render)
+* [Unikoa Bootstrap](https://github.com/muraljs/unikoa-bootstrap)
+* [Page.js](https://visionmedia.github.io/page.js/)
 
 #### App & Libraries
 
@@ -234,18 +234,18 @@ That said, a sort of "twelve factor" manifesto for writings apps/libs...
 
 #### Blossoming Complexity
 
-There are a number of strategies for dealing with complexity growing beyond the base MVC architecture Mural encourages. First of all a couple high-level philosophies we can suggest:
+There are a number of strategies for dealing with complexity growing beyond the base MVC architecture Mural encourages. To start off, here's two high-level philosophies we can suggest:
 
 1. Solve big problems by breaking them down into smaller problems
 2. There is no single tool for _every_ job—be quick to abbandon, or expand upon, patterns or libraries that aren't cutting it
 
 With that said, ways to put this in practice can take numerous shapes...
 
-Firstly if you find an app growing large in size and complexity, try splitting the app apart into smaller apps. For instance a single page for a user's profile could end up evolving into a full blown microsite with settings, photos, and blog pages. In this case it might make sense to separate that single user app into user-settings, user-photos, user-blog apps. A quick page refresh between app boundaries can do wonders for managing complexity and with Mural's universal appraoch to UI it could likely have little effect on the end user experience. Similarly it might make sense to refactor apps in a way that combines models into an API app and separates the views and controllers in to UI apps. Eventually you may even want to move some apps out into their own separarely deployed codebases.
+Firstly, if you find an app growing large in size and complexity try splitting the app apart into smaller apps. For instance a single page for a user's profile could end up evolving into a full blown microsite with settings, photos, and blog pages. In this case it might make sense to separate that single user app into user-settings, user-photos, user-blog apps. A quick page refresh between app boundaries can do wonders for managing complexity and with Mural's universal appraoch to UI it could likely have little effect on the end user experience. Similarly it might make sense to refactor apps in a way that combines models into an API app and separates the views and controllers in to UI apps. Eventually you may even want to move some apps out into their own separarely deployed codebases.
 
-If spliting an app with page refreshes is unacceptable, then it might make sense to introduce more layers beyond the base MVC. For instance if controller logic is getting to bloated you can introduce a UI model that extracts the state tree and the meat of controller functions into a UI model library. If the JoiQL Mongo model logic is getting too heavy it might make sense to break the functionality out into more single purpose libraries such as a "mailers" or "util".
+If spliting an app with page refreshes is unacceptable, then it might make sense to introduce more layers beyond the base MVC. For instance if controller logic is getting too bloated you can introduce a UI model that extracts the state tree and the meat of controller functions into a UI model library. If the JoiQL Mongo model logic is getting too heavy it might make sense to break the functionality out into more single purpose libraries such as a "mailers" or "util".
 
-Finally, the tools that Mural provides you are an attempt at something that is useful most of the time. If a particular UI or backend need is not a good fit for React, Mongo, GraphQL or any of the other tools provided—don't be shy about abandoning it all together. Mural's modular architecture should make it amiable to mount a new Koa app from scratch for a blank slate, or spin up an entirely different frontend or backend codebase that talks to the original Mural app.
+Finally, the tools that Mural provides you are an attempt at something that is useful most of the time. If a particular UI or backend need is not a good fit for React, Mongo, GraphQL or any of the other tools provided—don't be shy about abandoning it all together. Mural's modular architecture should make it easy to mount a new Koa app from scratch for a blank slate, or spin up an entirely different frontend or backend codebase that talks to the original Mural app's GraphQL endpoint.
 
 ### Why Yet Another Javscript Framework
 
@@ -254,10 +254,6 @@ GraphQL and React are revolutionary to how we build web apps. React has made bui
 These technologies have caused a wonderful explosion of ideas, patterns, and ecosystem. So much so that it can be overwhelming to wrap one's head around it all—especially if you're building on top of a batteries included framework like Rails with it's own robust architecture. There are already various boilerplates and frameworks for getting started with React, and React-like, projects but they often leave out GraphQL or the backend story all-together.
 
 Mural provides an end-to-end solution for building React + GraphQL apps with minimal layers, languages, and boilerplate involved.
-
-### Mural?
-
-A mural is a prickly seed case common in carrying the seeds of a tree. Turns out Mural projects are full of trees! You have your React component tree, your Baobab state tree, even GraphQL schemas are tree-like. So it felt appropriate that we name this framework after something that can begin your beautiful forest of apps. Also it's three letters, there's only two hard things in computer science, and npm is pretty booked these days.
 
 ## Contributing
 
