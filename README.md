@@ -1,6 +1,6 @@
 ![Mural.js](https://raw.githubusercontent.com/muraljs/mural/master/logo.png)
 
-A WIP framework for React and GraphQL. Check out an example of it being used to rebuild Artsy's internal HR product [Team Navigator](https://github.com/artsy/team-navigator/tree/v2), watch a [Lunch & Learn talk recording](https://www.dropbox.com/s/f8q5hbzwy76h3nt/contemplating-a-new-web-stack.mov?dl=0) from Artsy exploring the idea, or skip to [The Why](https://github.com/muraljs/mural#why-yet-another-javscript-framework) for a better introduction.
+A WIP framework for React and GraphQL. For a better introduction check out an example of it being used to rebuild Artsy's internal HR product [Team Navigator](https://github.com/artsy/team-navigator/tree/v2), watch a [Lunch & Learn talk recording](https://www.dropbox.com/s/f8q5hbzwy76h3nt/contemplating-a-new-web-stack.mov?dl=0) from Artsy exploring the idea, or skip to [The Why](https://github.com/muraljs/mural#why-yet-another-javscript-framework).
 
 ### Intro
 
